@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #DDDEDF;
+}
+
+.appStyle{
+  display: flex;
+  gap: 32px;
+  height: 100vh;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  body {
+    overflow: auto;
+  }
+
+  .appStyle {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .appStyle {
+    gap: 16px;
+    padding: 16px;
+  }
+}
+
+@font-face {
+  font-family: 'Roboto Flex';
+  src: url('./assets/RobotoFlex-Variable.woff2') format('woff2-variations');
+  font-weight: 100 1000;
+}
+
+@font-face {
+  font-family: 'Inter Variable';
+  src: url('./assets/Inter-Variable.woff2') format('woff2-variations');
+  font-weight: 100 1000;
+}
