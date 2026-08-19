@@ -50,12 +50,16 @@
 }
 
 .button-light {
-    background: #b8b6a5;
+    background-image: url('../assets/lightFon.png');
+    background-size: cover;
+    background-position: center;
     right: 60px;
 }
 
 .button-red {
-    background: #E41A1A;
+    background-image: url('../assets/redFon.png');
+    background-size: cover; /* для того чтобы фон был на фул блок*/
+    background-position: center; /* откуда начинает обрезание лишнего*/
     top: 280px;
     right: 100px;
 }
