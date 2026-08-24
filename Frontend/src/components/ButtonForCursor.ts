@@ -5,7 +5,7 @@ export function ButtonForCursor(
     screenRef: Ref<HTMLElement | null>,
     buttonRef: Ref<HTMLElement | null>
 ) {
-    const isHiden = ref(false)
+
     const isCoarsePointer = useMediaQuery('(pointer: coarse)')
 
     const { elementX, elementY, isOutside } = useMouseInElement(screenRef)
@@ -23,5 +23,4 @@ export function ButtonForCursor(
         buttonRef.value.style.top = `${clampedY}px`
     })
 
-    return { isHiden }
 }

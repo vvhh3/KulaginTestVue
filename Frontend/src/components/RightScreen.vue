@@ -7,11 +7,13 @@ import { ButtonForCursor } from './ButtonForCursor'
 const screenRef = ref<HTMLElement | null>(null) // реф для экрана
 const buttonRef = ref<HTMLElement | null>(null) // реф кнопки
 
-const { isHiden } = ButtonForCursor(screenRef, buttonRef) // toggle для кнопки
+ButtonForCursor(screenRef, buttonRef) // toggle для кнопки
 
 const goToSite = () => {
     window.open('https://kulaginbrand.ru/', '_blank')
 }
+
+const isHidden = ref(false)
 </script>
 
 
@@ -45,10 +47,10 @@ const goToSite = () => {
             <button 
             ref="buttonRef" 
             class="button-red"
-            @mouseenter="isHiden=true"
-            @mouseleave="isHiden=false"
+            @mouseenter="isHidden=true"
+            @mouseleave="isHidden=false"
             @click="goToSite">
-                <span v-if="isHiden">
+                <span v-if="isHidden">
                     <svg xmlns="http://w3.org" width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="7" y1="17" x2="17" y2="7"></line>
                     <polyline points="7 7 17 7 17 17"></polyline>
